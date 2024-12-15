@@ -1,6 +1,10 @@
 const express = require('express')
 const app = express()
 
+const midService = require('./midService')
+
+app.use(midService('Gabriel'))
+
 app.use('/opa', (req, res, next) => {
     console.log('Antes')
     next()
